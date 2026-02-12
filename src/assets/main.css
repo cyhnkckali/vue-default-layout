@@ -1,0 +1,19 @@
+@import "./default-layout.scss";
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100dvh;
+  width: 100dvw;
+
+  #app {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+body * {
+  @apply lg:scrollbar-none lg:hover:scrollbar-thin dark:scrollbar-track-surface-950 dark:scrollbar-thumb-surface-800 dark:scrollbar-corner-surface-800 scrollbar-track-surface-0 scrollbar-thumb-surface-200 scrollbar-corner-surface-200;
+}

@@ -1,0 +1,107 @@
+@import "tailwindcss";
+@import "tailwind-scrollbar-hide/v4";
+@import "./main.css";
+
+@plugin 'tailwind-scrollbar';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    @apply border-surface-200 dark:border-surface-700;
+  }
+
+  button,
+  [role="button"] {
+    cursor: pointer;
+  }
+
+  :root {
+    --bs-header-box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.03);
+    --fx-primary: 37 100 235;
+    --fx-success: 16 185 129;
+    --fx-info: 109 40 217;
+    --fx-warn: 245 159 11;
+    --fx-error: 239 68 68;
+
+    --fx-surface-0: 255 255 255;
+    --fx-surface-50: 248 250 252;
+    --fx-surface-100: 241 245 249;
+    --fx-surface-200: 226 232 240;
+    --fx-surface-300: 203 213 225;
+    --fx-surface-400: 148 163 184;
+    --fx-surface-500: 100 116 139;
+    --fx-surface-600: 71 85 105;
+    --fx-surface-700: 51 65 85;
+    --fx-surface-800: 30 41 59;
+    --fx-surface-900: 15 23 42;
+    --fx-surface-950: 2 6 23;
+
+    --fx-text: var(--fx-surface-950);
+    --fx-invite: var(--fx-surface-950);
+    --fx-secondary: var(--fx-surface-100);
+    --fx-body: var(--fx-surface-0);
+    --fx-border: var(--fx-surface-100);
+
+    --p-tooltip-background: rgb(var(--fx-surface-800)) !important;
+  }
+
+  html.dark {
+    --fx-primary: 29 78 216;
+    --fx-success: 5 150 105;
+    --fx-info: 124 58 237;
+    --fx-warn: 245 159 11;
+    --fx-error: 220 38 38;
+
+    --fx-text: var(--fx-surface-0);
+    --fx-invite: var(--fx-surface-0);
+    --fx-secondary: var(--fx-surface-800);
+    --fx-border: var(--fx-surface-800);
+    --fx-body: var(--fx-surface-950);
+
+    --p-tooltip-background: rgb(var(--fx-surface-900)) !important;
+  }
+}
+
+@theme {
+  --default-transition-duration: 0.2s;
+  --default-transition-timing-function: linear;
+
+  --font-sans: "Inter", "system-ui", "sans-serif";
+  --z-index-55: 55;
+  --spacing-18: 4.5rem;
+  --height-18: 4.5rem;
+  --min-height-18: 4.5rem;
+  --width-18: 4.5rem;
+  --min-width-18: 4.5rem;
+}
+
+@theme inline {
+  --color-surface-0: rgb(var(--fx-surface-0));
+  --color-surface-50: rgb(var(--fx-surface-50));
+  --color-surface-100: rgb(var(--fx-surface-100));
+  --color-surface-200: rgb(var(--fx-surface-200));
+  --color-surface-300: rgb(var(--fx-surface-300));
+  --color-surface-400: rgb(var(--fx-surface-400));
+  --color-surface-500: rgb(var(--fx-surface-500));
+  --color-surface-600: rgb(var(--fx-surface-600));
+  --color-surface-700: rgb(var(--fx-surface-700));
+  --color-surface-800: rgb(var(--fx-surface-800));
+  --color-surface-900: rgb(var(--fx-surface-900));
+  --color-surface-950: rgb(var(--fx-surface-950));
+
+  --color-primary: rgb(var(--fx-primary));
+  --color-secondary: rgb(var(--fx-secondary));
+  --color-text: rgb(var(--fx-text));
+  --color-success: rgb(var(--fx-success));
+  --color-info: rgb(var(--fx-info));
+  --color-warning: rgb(var(--fx-warn));
+  --color-error: rgb(var(--fx-error));
+  --color-invite: rgb(var(--fx-invite));
+  --color-border: rgb(var(--fx-border));
+  --color-body: rgb(var(--fx-body));
+  --color-transparent: transparent;
+  --color-current: currentColor;
+}

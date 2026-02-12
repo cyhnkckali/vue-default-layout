@@ -1,0 +1,18 @@
+@import "./layout/slider.scss";
+
+.default-layout {
+  @apply flex flex-1 bg-slate-50 dark:bg-slate-900;
+
+  & .first-area {
+    scrollbar-gutter: stable;
+    @apply flex flex-col flex-1 bg-white dark:bg-slate-950 scroll-smooth overflow-y-auto scrollbar-thin;
+
+    & header {
+      @apply flex items-center shrink-0 sticky top-0 bg-white dark:bg-slate-950 h-16 px-4;
+    }
+
+    & .second-area {
+      @apply flex flex-1 p-4;
+    }
+  }
+}
