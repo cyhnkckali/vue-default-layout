@@ -1,5 +1,5 @@
 <template>
-  <div @click="changeToggle" class="cursor-pointer">
+  <button type="button" aria-label="Toggle Theme" @click="changeToggle" class="cursor-pointer">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-5 fill-amber-500">
       <g clip-path="url(#clip0_4418_7943)">
         <path
@@ -19,7 +19,7 @@
         </clipPath>
       </defs>
     </svg>
-  </div>
+  </button>
 </template>
 
 <script setup lang="ts">

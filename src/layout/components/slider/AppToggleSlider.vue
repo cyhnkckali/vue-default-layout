@@ -1,5 +1,5 @@
 <template>
-  <div @click="slideToggle" class="cursor-pointer">
+  <button type="button" aria-label="Open Slider" @click="slideToggle" class="cursor-pointer">
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 24 24"
@@ -18,7 +18,7 @@
         </clipPath>
       </defs>
     </svg>
-  </div>
+  </button>
 </template>
 
 <script setup lang="ts">
