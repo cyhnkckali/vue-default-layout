@@ -6,23 +6,15 @@ aside.slider-overlay {
     @apply flex items-center h-16 px-4;
 
     & .slider-footer-user {
-      @apply flex items-center justify-center min-w-8 h-8 rounded-full bg-slate-500 text-white text-xs font-semibold;
+      @apply flex items-center justify-center min-w-8 h-8 rounded-full bg-slate-500 text-white text-sm font-semibold;
     }
   }
   & .slider-header-text,
   & .slider-footer-text {
-    @apply overflow-hidden text-nowrap opacity-0 transition-all duration-150 ease-linear w-0 leading-4 text-invite;
+    @apply overflow-hidden text-nowrap opacity-0 transition-all duration-150 ease-linear w-0 leading-4 text-invite text-sm!;
 
     & .caption {
       @apply text-slate-500 text-xs font-normal;
-    }
-  }
-
-  & .slider-footer {
-    @apply bg-surface-100 dark:bg-surface-800 rounded;
-
-    & .slider-footer-text {
-      @apply text-sm!;
     }
   }
 
@@ -35,7 +27,7 @@ aside.slider-overlay {
 
     & .slider-header-text,
     & .slider-footer-text {
-      @apply flex flex-col ml-2 text-base font-semibold opacity-100 w-auto;
+      @apply flex flex-col ml-3 text-base font-semibold opacity-100 w-auto;
     }
   }
 }

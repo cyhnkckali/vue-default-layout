@@ -1,8 +1,8 @@
 <template>
   <div class="slider-footer">
-    <div class="slider-footer-user mr-1">CK</div>
-    <span class="slider-footer-text grow"
-      >Ceyhun Küçükali
+    <div class="slider-footer-user">CK</div>
+    <span class="slider-footer-text grow">
+      <span>Ceyhun Küçükali</span>
       <span class="caption">ceyhunkucukali@gmail.com</span>
     </span>
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="w-4 rotate-90 stroke-invite">
