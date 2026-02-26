@@ -33,8 +33,10 @@ function getViewPort(): { width: number; height: number } {
 function asideOpenOrClose() {
   const aside = document.querySelector("aside");
 
-  if (aside?.getAttribute("data-aside-open") == "false") {
-    aside.setAttribute("data-aside-open", "true");
+  const isOpen = aside?.getAttribute("data-aside-open") === "true";
+
+  if (!isOpen) {
+    aside?.setAttribute("data-aside-open", "true");
   } else {
     aside?.setAttribute("data-aside-open", "false");
   }
