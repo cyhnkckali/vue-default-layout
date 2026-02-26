@@ -1,0 +1,15 @@
+{
+    "language": "Dil",
+    "welcome": "Uygulamamıza hoş geldiniz!",
+    "login": "Giriş Yap",
+    "logout": "Çıkış Yap",
+    "username": "Kullanıcı Adı",
+    "password": "Şifre",
+    "page": {
+        "title": {
+            "home": "Ana Sayfa",
+            "about": "Hakkımızda",
+            "contact": "İletişim"
+        }
+    }
+}

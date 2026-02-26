@@ -1,0 +1,15 @@
+{
+    "language": "Language",
+    "welcome": "Welcome to our application!",
+    "login": "Login",
+    "logout": "Logout",
+    "username": "Username",
+    "password": "Password",
+    "page": {
+        "title": {
+            "home": "Dashboard",
+            "about": "About",
+            "contact": "Contact"
+        }
+    }
+}

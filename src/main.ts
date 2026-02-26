@@ -1,13 +1,34 @@
 import { createApp } from "vue";
 import { createPinia } from "pinia";
-import "@/assets/index.css";
-
+import { i18n } from "./localization";
+import { setupRouter } from "./router";
 import App from "./App.vue";
 import router from "./router";
 
-const app = createApp(App);
+import "@/assets/index.css";
 
-app.use(createPinia());
-app.use(router);
+async function bootstrap() {
+  // // Öncelikli locale: localStorage -> URL path segment -> 'en'
+  // const saved = localStorage.getItem("app-locale");
+  // const pathLocale = window.location.pathname.split("/")[1];
+  // const initialLocale = (saved || pathLocale || "en").toLowerCase();
 
-app.mount("#app");
+  // const i18n = setupI18n({ locale: initialLocale });
+
+  // // Eğer başlangıç locale'u yüklü değilse lazy load et (loadLocaleMessages içinde cache kontrolü var)
+  // await loadLocaleMessages(i18n, initialLocale);
+  // setI18nLanguage(i18n, initialLocale);
+
+  // router guard'ı i18n ile bağla
+
+  const app = createApp(App);
+
+  app.use(createPinia());
+  app.use(i18n);
+  app.use(router);
+  setupRouter(i18n);
+
+  app.mount("#app");
+}
+
+bootstrap();
